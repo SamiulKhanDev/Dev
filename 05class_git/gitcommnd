@@ -14,6 +14,13 @@ to know the status of current working area use git status
 
 to commit use git commit -m "massage" ->this massage will be shown to other dev to make them understand what changes you have done
 
+<-to deploy->
+to deploy a page with github the main page name must be index.html
+
+go to the repository in github and go to setting and go down to github pages and click the link
+then save the origin to master and save,then wait for 20sec then it will be deployed
+
+
 
 
 
