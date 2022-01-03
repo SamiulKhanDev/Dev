@@ -1,0 +1,20 @@
+git config --global user.name "username" ->this set a global user for this pc
+git config --global user.email "email" ->this set a global email for this pc
+
+git init to initialize empty git repo in the present location
+to deploy a page with github the main page name must be index.html
+too stage a file to commit latter git add "file name" will stage the specific file,
+if you want to stage all the files use git add '.' 
+
+stage area "Staging area is files that are going to be a part of the next commit, which lets git know what changes in the file are going to occur for the next commit. The repository contains all of a project's commits."
+
+to unStage use git rm --cached "file name"
+
+to know the status of current working area use git status
+
+to commit use git commit -m "massage" ->this massage will be shown to other dev to make them understand what changes you have done
+
+
+
+
+
