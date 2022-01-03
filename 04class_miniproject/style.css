@@ -1,0 +1,87 @@
+html
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+    /* default font size in html is 16px ,1 rem=16px */
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+header>h1
+{
+    font-weight: 400;
+   font-size: 2rem;
+}
+
+nav
+{
+    width: 22rem;
+    /* position: relative;  */
+    /* relative to its original position */
+    /* top:1rem; */
+    /* top seh nche 1 rem */
+   
+
+}
+nav>ul
+{
+    display: flex;
+    justify-content: space-between;
+    /* width: 30rem; */
+}
+
+nav>ul>li
+{
+    
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+nav a
+{
+  text-decoration: none;
+  color: black;
+}
+
+section
+{
+   display: flex;
+   justify-content: center;
+}
+
+.show_case_image
+{
+    width: 95vw;
+    /* margin: 1rem; */
+
+    /* vw=view-width-> adjusted depends upon screen , 95vw = 95% of screen */
+    /* vh=view-height-> adjusted depends upon screen , 95vh = 95% of screen */
+}
+
+article
+{
+    display: flex;
+  
+    justify-content: center;
+}
+article div
+{
+    margin: 1rem;
+    text-align: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+   /* padding: 1.5rem; */
+   height: 8vh; 
+   font-size: 1.5rem;
+  }
