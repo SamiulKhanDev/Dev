@@ -27,9 +27,9 @@
 
 //problems with var keyword
 
-//1) Redeclartion  problem
+//1) Redeclaration  problem
 
-// var a = "samiu";
+// var a = "samiul";
 // console.log(a);
 // var a = "khan";
 // console.log(a);
@@ -82,7 +82,23 @@
 
 //const
 
-//const dosent allow redeclearion and reasiggn;
+//const dosen't allow redeclearion and reasiggn;
+
+// let a;
+// console.log(a);//also initialize it with undefined
+
+
+// scoping and redeclarartion problem
+
+// because we can treat functions as varibale after storing them in variable
+
+// undefined
+
+// Number
+// String
+// Null
+// boolean
+
 
 
 

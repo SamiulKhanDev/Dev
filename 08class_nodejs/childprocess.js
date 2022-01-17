@@ -3,7 +3,7 @@
 //child process is a node module used to create sub proccess within a script
 // you can different tasks with your script
 
-// const cp = require("child_process");
+const cp = require("child_process");
 
 // let val = cp.execSync("node test");
 // console.log("val is" + val);
@@ -19,3 +19,5 @@
 // cp.execSync("code");
 
 // console.log("output"+ cp.execSync('node test.js'))
+
+// cp.execSync("open -a Google Chrome");
