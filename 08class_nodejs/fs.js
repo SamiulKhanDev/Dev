@@ -1,5 +1,7 @@
 //file system module;
 const fs = require('fs');
+const path = require('path');
+
 
 //we will read write delete and update in a file
 
@@ -56,6 +58,32 @@ const fs = require('fs');
 // console.log(dataFile.isDirectory());//will say if it is a folder or not;
 
 
+//5 see content inside  directory
+
+// let folderPath = '/Users/samiulkhan/Desktop/Dev/06class_introtojs';
+
+// let contentInsideTheFolder = fs.readdirSync(folderPath);//returns a array with all the files and folder inside;
+// console.log(contentInsideTheFolder);
+
+
+//copying file from src to des;
+
+//steps
+//1 src path
+//2 des path
+//create new destination after appending des path with file name by using path.join();
+//use copyFilsSync of fs module
+// let srcPath = "/Users/samiulkhan/Desktop/Dev/08class_nodejs/1.txt";
+// let destinationFolderPath = "/Users/samiulkhan/Desktop/Dev/08class_nodejs/mydir";
+// let fileName = path.basename(srcPath);
+// let newDestinationPath = path.join(destinationFolderPath, fileName);
+// console.log(newDestinationPath);
+// fs.copyFileSync(srcPath, newDestinationPath);
+//after this you can delete the file or can it stay;
+// fs.unlinkSync(srcPath);
+//we also can do this
+// let val = fs.readFileSync(srcPath);
+// fs.writeFileSync(newDestinationPath, val);
 
 
 

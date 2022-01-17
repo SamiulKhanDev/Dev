@@ -1,1 +1,4 @@
 .DS_store
+09class_npm,modularity/npm/node_modules
+09class_npm,modularity/npm/package-lock.json
+09class_npm,modularity/npm/package.json
