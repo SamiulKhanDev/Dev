@@ -1,44 +1,44 @@
-//file system module;
-const fs = require('fs');
-const path = require('path');
+// //file system module;
+// const fs = require('fs');
+// const path = require('path');
 
 
-//we will read write delete and update in a file
+// we will read write delete and update in a file
 
-//1 read file
+// 1 read file
 
 // const value = fs.readFileSync("./1.txt");//value if in buffer format by default;
 // const code = fs.readFileSync("./os.js")
 // console.log(code.toString());
 // console.log(value.toString());
 
-//2 writing to a file
+// 2 writing to a file
 // fs.writeFileSync("./2.txt", "hello word");//this will delete all  other data in that file will only write "hello world",if the file dosen,t exits then it will create the file first,then will write in it;
 
 
-//3 updating or appending in file
-//to append in a file you have to use appendFileSync
+// 3 updating or appending in file
+// to append in a file you have to use appendFileSync
 
 // fs.appendFileSync("./1.txt", " appending data to the file")
 // fs.appendFileSync("./3.txt", "file not present") //if file not present will create one;
 
-//4 delete a file
+// 4 delete a file
 // fs.unlinkSync('./3.txt');//unlinkSync is to delete file;
 // fs.unlinkSync("./5.txt");//if file not present will throw error;
 
-//
-//
-//now lets talk about directory
-//create ,delete,check a directory exits or not,directory stats,content inside directory
 
-//1 create
+
+// now lets talk about directory
+// create ,delete,check a directory exits or not,directory stats,content inside directory
+
+// 1 create
 // fs.mkdirSync('./mydir');//this will create a direct in './' address named "mydir";//if the directory already exits it will not create again ans throw error;
 
-//2 delete dir
+// 2 delete dir
 // fs.mkdirSync("./rmdir");
 // fs.rmdirSync('./rmdir');//we remove rmdir inside './' address,if the dir not exits will throw error;
 
-//3 check if folder/file exists and it returns true or false;
+// 3 check if folder/file exists and it returns true or false;
 
 // let isPresentFolder = fs.existsSync("./mydir");//mydir is present inside './' path so returns true;
 // console.log(isPresentFolder);
@@ -48,7 +48,7 @@ const path = require('path');
 // let isPresentFile1 = fs.existsSync("./3.txt");//3.txt is not present inside './' path so returns false;
 // console.log(isPresentFile1);
 
-//4 check status of file or folder
+// 4 check status of file or folder
 
 // let dataFolder = fs.lstatSync("./mydir");//return details of this folder as a json object
 // console.log(dataFolder);
@@ -58,7 +58,7 @@ const path = require('path');
 // console.log(dataFile.isDirectory());//will say if it is a folder or not;
 
 
-//5 see content inside  directory
+// 5 see content inside  directory
 
 // let folderPath = '/Users/samiulkhan/Desktop/Dev/06class_introtojs';
 
@@ -66,22 +66,22 @@ const path = require('path');
 // console.log(contentInsideTheFolder);
 
 
-//copying file from src to des;
+// copying file from src to des;
 
-//steps
-//1 src path
-//2 des path
-//create new destination after appending des path with file name by using path.join();
-//use copyFilsSync of fs module
+// steps
+// 1 src path
+// 2 des path
+// create new destination after appending des path with file name by using path.join();
+// use copyFilsSync of fs module
 // let srcPath = "/Users/samiulkhan/Desktop/Dev/08class_nodejs/1.txt";
 // let destinationFolderPath = "/Users/samiulkhan/Desktop/Dev/08class_nodejs/mydir";
 // let fileName = path.basename(srcPath);
 // let newDestinationPath = path.join(destinationFolderPath, fileName);
 // console.log(newDestinationPath);
 // fs.copyFileSync(srcPath, newDestinationPath);
-//after this you can delete the file or can it stay;
+// after this you can delete the file or can it stay;
 // fs.unlinkSync(srcPath);
-//we also can do this
+// we also can do this
 // let val = fs.readFileSync(srcPath);
 // fs.writeFileSync(newDestinationPath, val);
 
