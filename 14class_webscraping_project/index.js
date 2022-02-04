@@ -15,6 +15,8 @@ function callback(error, response, html)
     {
         // console.log(html);
         extractLink(html);
+        
+
             
     }
 }
@@ -28,6 +30,38 @@ function extractLink(html)
     const homapageLink = "https://www.espncricinfo.com";
 
     const fullLink = homapageLink.concat(link);
-    console.log(fullLink);
+    // return fullLink;
+    getAllMatchesList(fullLink);
+    // console.log(scoreCardLinkList);
     
+    
+}
+
+
+function getAllMatchesList(fullLink)
+{
+    request(fullLink, function (error, response, html)
+    {
+        if (error)
+        {
+            console.log(error);
+        }
+        else
+        {
+            const $ = cheerio.load(html);
+            const list = [];
+            const scoreCardList = $('a[data-hover="Scorecard"]');
+            const homepageLink = "https://www.espncricinfo.com";
+            for (let scoreCard of scoreCardList)
+            {
+                const link = homepageLink.concat($(scoreCard).attr("href"));
+                list.push(link);
+                
+            }
+
+            console.log(list);
+            
+            
+        }
+    })
 }
