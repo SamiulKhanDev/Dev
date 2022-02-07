@@ -25,15 +25,50 @@ function extractData(html)
     const venue = description[1].trim();
     const date = description[2].trim();
     const result = $(".match-info.match-info-MATCH.match-info-MATCH-half-width .status-text").text();
-    const teamsName = $('a[class="name-link"]');
-    console.log(venue);
-    console.log(date);
-    console.log(result);
-    for (let name of teamsName)
+    // const teamsName = $('a[class="name-link"]');
+    // console.log(venue);
+    // console.log(date);
+    // console.log(result);
+    
+    const innings = $(".card.content-block.match-scorecard-table .Collapsible");
+    let htmlString = "";
+    // let idx = 0;
+    for (let i = 0; i < 2;i++)
     {
-        console.log($(name).text());
-            
+        htmlString += $(innings[i]).html();    
+        const teamName = $(innings[i]).find("h5").text().split("INNINGS")[0].trim();
+        const oIndex = (i == 0 ? 1 : 0);
+        const opponentName = $(innings[oIndex]).find("h5").text().split("INNINGS")[0].trim();
+        // console.log(teamName+" "+opponentName);
+       
+        
+        let allRows = $(innings[i]).find('.table.batsman tbody tr');
+        
+        for (let j = 0; j < allRows.length; j++)
+        {
+            let allCols = $(allRows[j]).find("td");
+            let isWorthy = $(allCols[0]).hasClass("batsman-cell");
+            if (isWorthy)
+            {
+                let playerName = $(allCols[0]).text();
+                let runs = $(allCols[2]).text();
+                let balls = $(allCols[3]).text();
+                let fours = $(allCols[5]).text();
+                let six = $(allCols[6]).text();
+                let str = $(allCols[7]).text();
+                console.log(playerName +" "+runs+" "+balls+" "+fours+" "+six+" "+str);
+            }
+        }
+
+        console.log("`````````````````````````````````````````````````");
+      
     }
+
+    // console.log(htmlString);
+    
+
     
 
 }
+
+module.exports = extractData;
