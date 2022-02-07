@@ -1,5 +1,6 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const proceesScoreCard = require("./scorecard");
 function extractLink(html)
 {
     const $ = cheerio.load(html);
@@ -25,18 +26,7 @@ function getAllMatchesList(fullLink)
             for (let scoreCard of scoreCardList)
             {
                 const link = homepageLink.concat($(scoreCard).attr("href"));
-                request(link, function (error, response, html)
-                {
-                    if (error)
-                    {
-                        console.log(error);
-                            
-                    }
-                    else
-                    {
-                        extractData(html);    
-                    }
-                })
+                proceesScoreCard(link);
             }
         }
     })

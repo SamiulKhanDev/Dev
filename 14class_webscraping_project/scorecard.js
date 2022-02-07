@@ -1,9 +1,14 @@
-const url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595/mumbai-indians-vs-chennai-super-kings-1st-match-1216492/full-scorecard";
+// const url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595/mumbai-indians-vs-chennai-super-kings-1st-match-1216492/full-scorecard";
 const request = require("request");
 const cheerio = require("cheerio");
 
 
-request(url, callback);
+function proceesScoreCard(url)
+{
+    request(url, callback);
+}
+
+
 
 function callback(error, response, html)
 {
@@ -71,4 +76,4 @@ function extractData(html)
 
 }
 
-module.exports = extractData;
+module.exports = proceesScoreCard;
