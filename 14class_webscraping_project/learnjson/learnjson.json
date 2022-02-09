@@ -1,0 +1,94 @@
+[
+    {
+        "name": "samiul",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+        
+    },
+    {
+        "name": "samiul",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    },
+    {
+        "name": "samiul",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    },
+    {
+        "name": "samiul",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    },
+    {
+        "name": "mia",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    },
+    {
+        "name": "mia",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    },
+    {
+        "name": "mia",
+        "last name": "khan",
+        "age": 102,
+        "address": {
+            "town": "kolkata",
+            "state": "WB"
+        },
+        "friend": [
+            "soum"
+        ],
+        "isAvanger": false
+    }
+]

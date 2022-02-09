@@ -1,6 +1,14 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const fs = require("fs");
+const path = require("path");
 const proceesScoreCard = require("./scorecard");
+
+const dirPath = path.join(__dirname, "IPL");
+
+createDir(dirPath);
+
+
 function extractLink(html)
 {
     const $ = cheerio.load(html);
@@ -30,6 +38,14 @@ function getAllMatchesList(fullLink)
             }
         }
     })
+}
+
+function createDir(dirPath)
+{
+    if (fs.existsSync(dirPath) == false)
+    {
+        fs.mkdirSync(dirPath);    
+    }
 }
 
 module.exports = extractLink;
