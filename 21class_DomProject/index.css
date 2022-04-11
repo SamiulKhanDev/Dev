@@ -110,6 +110,7 @@ body{
     padding: 2rem;
     background-color: #dfe4ea;
     font-size: 2rem;
+    
   }
   
   
@@ -131,13 +132,15 @@ body{
   }
   
   .active{
-    border: 5px solid #d1d8e0;
+    border: 5px solid red;
   }
   
   .main-cont{
      display: flex;
      gap:2rem;
      justify-content: center;
+     padding: 2rem;
+     flex-wrap: wrap;
     
   }
   
@@ -146,13 +149,15 @@ body{
     height: 12rem;
     width: 15rem;
     background-color: #f1f2f6;
+    position:relative;
+    
     
   }
   
   
   .ticket-color{
     height: 1rem;
-    background-color: black;
+  
   }
   
   
@@ -163,10 +168,30 @@ body{
   
   
   .task-area{
-    height: calc(100%  -1rem - 2rem);
+    height: calc(100%  - 1rem - 2rem - 2rem);
+    width: 15rem;
+    word-wrap: break-word;
+    overflow-y: scroll;
     font-size: 1.5rem;
-  
-    padding:5px
+    padding:5px;
+    outline: none;
+
+    
+  }
+
+  .ticket-lock 
+  {
+    display: flex;
+    position: absolute;
+    height: 1rem;
+    bottom: 0;
+    left: 0;
+    
+
+  }
+  .ticket-lock>*
+  {
+   
   }
   
   
