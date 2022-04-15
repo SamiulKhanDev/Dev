@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script type="text/babel">
+    //normal dom
+    //const root = document.querySelector("#root");
+    //const h1 = document.createElement('h1');
+    //h1.innerText = "hello word";
+    //root.appendChild(h1);
+
+   //react hard
+
+    //const h1 = React.createElement('h1',{ // document's createElement get change to React's createElement which take two value
+                                                              // first one- the element that need to craete,and it children in an object's key,which except an array;
+       // children:["hello"]
+    //});
+
+   // ReactDOM.render(h1,document.getElementById("root"));//render function comes from ReactDom not from render,it takes to value,element need to be render;
+                                                                                        //location where it need to be rendered
+
+    //react with jsx
+
+   // function Element()//functional componnet
+    //{
+       // return(
+            //<h1>hello</h1>
+        //)
+    //}
+
+    //ReactDOM.render(<Element/>,document.getElementById("root"));
+    //but this is jsx,browsers are not smart enough to understand jsx,we need to use babel js,
+    // just add cdn of babel,and set the type of script file as text/babel;
+    //inside jsx (return) no loops or function creation or function calling allowed;
+    //to use this componrnt multiple time,use a parent component; see below examples;
+    function Child({name,age,place})
+    {
+        return (
+            <React.Fragment>
+            <h1>hello {name}</h1>
+            <h1>{age}</h1>
+            <h1>{place}</h1>
+            </React.Fragment>
+        )
+        
+    }
+    function Child1({place})
+    {
+        return  <h1>GoodBye {place}</h1>
+    }
+
+ //<></> ->react fragment ,u can also use somethind like a div to bind all children,be it same child or different
+    function Main()
+    {
+       
+        return(
+            <React.Fragment>
+            <Child name="Samiul" age = "70" place="jamberia"/>
+            <Child1 place ="kolkata"/>
+            <Child/>
+            <Child1/> 
+            </React.Fragment>
+        
+        )
+            
+        
+    }
+
+    ReactDOM.render(<Main/>,document.getElementById("root"));
+
+
+
+
+</script>
+<!-- <script crossorigin src="..."></script> -->
+</html>
